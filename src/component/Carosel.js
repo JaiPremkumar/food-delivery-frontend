@@ -132,7 +132,7 @@ export default function Carosel(){
                </Col>
             </Row>
         </Container>
-        
+        <h1>MENUS:</h1>
         <div className='row justify-content-center aligen-item-center '> 
         {products && products.map((item,_id)=>(
         <Card className=' m-3 ' style={{ width: '18rem' }} key={_id}>
@@ -179,7 +179,7 @@ export default function Carosel(){
           </Slider>
          </div>
          
-
+         <h1>Restarunt</h1>
          <Container > 
          <div className="slider-container">
          <Slider {...settingss}>
@@ -197,7 +197,7 @@ export default function Carosel(){
            </Slider>
            </div>
            </Container>
-          
+          <h1>CLOUD-KITCHEN</h1>
            <div className="row justify-content-center aligen-item-center">
           { kitchens&& kitchens?.map((item,_id)=>(
           <Card className=' m-5 ' style={{ width: '18rem' }} key={_id}>

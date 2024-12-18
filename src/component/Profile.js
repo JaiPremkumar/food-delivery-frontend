@@ -1,10 +1,20 @@
+import { useEffect } from "react"
 import { Card } from "react-bootstrap"
-import { useSelector } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { Link } from "react-router-dom"
+import { loadUser } from "./action/authAction"
 
 export default function Profile(){
 
   const{isAuthenticated, user} = useSelector(state=>state.userState)
+  const dispatch = useDispatch()
+
+
+  useEffect(()=>{
+     if(isAuthenticated){
+      dispatch(loadUser)
+      }
+  })
 
     return(
       <>

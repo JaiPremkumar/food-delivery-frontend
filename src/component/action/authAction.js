@@ -6,7 +6,7 @@ import { allUserFailed, allUserRequest, allUserSuccess, loginFailed, loginReques
 export const login =(email,password)=>async (dispatch) => {
     try {
         dispatch(loginRequest())
-        const {data} = await axios.post(`api/v1/login`,{email,password})
+        const {data} = await axios.post(`https://food-delivery-3-urm7.onrender.com/api/v1/login`,{email,password})
         dispatch(loginSuccess(data))
         console.log(data.token)
         const token = data.token
@@ -26,7 +26,7 @@ export const register =(formData)=>async (dispatch) => {
                 'Content-type': 'multipart/form-data'
             }
         }
-        const {data} = await axios.post(`api/v1/register`,formData,config)
+        const {data} = await axios.post(`https://food-delivery-3-urm7.onrender.com/api/v1/register`,formData,config)
         dispatch(registerSuccess(data))
         
     } catch (error) {
@@ -40,7 +40,7 @@ export const register =(formData)=>async (dispatch) => {
 export const loadUser =async (dispatch) => {
     try {
         dispatch(logUserRequest())
-        const {data} = await axios.get(`api/v1/myDp`) 
+        const {data} = await axios.get(`https://food-delivery-3-urm7.onrender.com/api/v1/myDp`) 
         dispatch(logUserSuccess(data))
         
     } catch (error) {
@@ -53,7 +53,7 @@ export const loadUser =async (dispatch) => {
 export const logOut =async (dispatch) => {
     try {
         
-         await axios.post(`api/v1/logout`)
+         await axios.post(`https://food-delivery-3-urm7.onrender.com/api/v1/logout`)
         dispatch(logOutSuccess())
     } catch (error) {
         dispatch(logOutFailed(error.responce.data.message))
@@ -64,7 +64,7 @@ export const logOut =async (dispatch) => {
 export const updateProfile =(name,email)=>async (dispatch) => {
     try {
         dispatch(updateUserRequest())
-        const {data} = await axios.put(`api/v1/updateuser`,{name,email})
+        const {data} = await axios.put(`https://food-delivery-3-urm7.onrender.com/api/v1/updateuser`,{name,email})
         dispatch(updateUserSuccess(data))
     } catch (error) {
         dispatch(updateUserFailed(error.responce.data.message))

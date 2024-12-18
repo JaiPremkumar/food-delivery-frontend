@@ -5,9 +5,10 @@ import Navbar from 'react-bootstrap/Navbar';
 import OffCart from './OffCart';
 import { useDispatch, useSelector } from 'react-redux';
 import { Button, Dropdown, DropdownButton } from 'react-bootstrap';
-import { logOut } from './action/authAction';
+import { loadUser, logOut } from './action/authAction';
 import { Link } from 'react-router-dom'
 import Favour from './Favour';
+import { useEffect } from 'react';
 
 export default function Header(){ 
 
@@ -18,7 +19,12 @@ export default function Header(){
   const handlelogOut=()=>{
     dispatch(logOut)
   }
-
+  
+useEffect(()=>{
+   if(isAuthenticated){
+    dispatch(loadUser)
+    }
+})
     return(
         <>
           <Navbar expand="lg" className="bg-danger" style={{top:"0px",position:"sticky",zIndex:1}}>

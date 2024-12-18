@@ -55,7 +55,8 @@ export default function ProductDetail(){
         <Card.Subtitle className="mb-2 text-muted"><h2>Price: {product.price}</h2></Card.Subtitle>
         <br></br>
         <Card.Text>
-            <b>description: {product.description}</b>
+            <h5>description: {product.description}</h5>
+            <h5>seller: {product.seller}</h5>
         </Card.Text>
         <form className="forms" >
          <input type="number"

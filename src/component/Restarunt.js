@@ -31,8 +31,8 @@ export default function Restarunt(){
           />
           
           <h3>cuisine: {restarunt.cuisine}</h3>
-          <b>location: {restarunt.address}</b><br/>
-          <b>{restarunt.city}</b>
+          <h5>location: {restarunt.address}</h5><br/>
+          <h5 >{restarunt.city}</h5><br/>
           <Button variant="danger" 
           onClick={()=>handleRes(restarunt.restarunt)}
           >Menu</Button>

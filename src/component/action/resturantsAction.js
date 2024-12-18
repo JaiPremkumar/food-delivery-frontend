@@ -6,7 +6,7 @@ import { newResturantFailed, newResturantRequest, newResturantSuccess, resturant
 export const getSingleResturant =(id)=> async(dispatch)=>{
     try {
         dispatch(resturantsSingleRequest())
-        const {data} = await axios.get(`/api/v1/rest/${id}`) 
+        const {data} = await axios.get(`https://food-delivery-3-urm7.onrender.com/api/v1/rest/${id}`) 
         dispatch(resturantsSingleSuccess(data))
         console.log(data)
     } catch (error) {
@@ -22,7 +22,7 @@ export const createResturant =(formData)=> async(dispatch)=>{
                 'Content-type': 'multipart/form-data'
             }
         }
-        const {data} = await axios.post(`/api/v1/rest/`,formData,config) 
+        const {data} = await axios.post(`https://food-delivery-3-urm7.onrender.com/api/v1/rest/`,formData,config) 
         dispatch(newResturantSuccess(data))
         console.log(data)
     } catch (error) {

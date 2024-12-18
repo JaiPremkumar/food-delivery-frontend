@@ -4,7 +4,7 @@ import { productCrtFailed, productCrtRequest, productCrtSuccess, productFailed, 
 export const getProduct = id =>async(dispatch)=>{
     try {
         dispatch(productRequest())
-        const {data} = await axios.get(`/api/v1/product/${id}`) 
+        const {data} = await axios.get(`https://food-delivery-3-urm7.onrender.com/api/v1/product/${id}`) 
         console.log(data)
         dispatch(productSuccess(data))
         
@@ -21,7 +21,7 @@ export const createProduct = (formData)=>async(dispatch)=>{
                 'Content-type': 'multipart/form-data'
             }
         }
-        const {data} = await axios.post(`/api/v1/product/new/`,formData,config) 
+        const {data} = await axios.post(`https://food-delivery-3-urm7.onrender.com/api/v1/product/new/`,formData,config) 
         console.log(data)
         dispatch(productCrtSuccess(data))
         
@@ -34,7 +34,7 @@ export const updateProduct = (id,name,price,image,seller,categories,description)
     try {
         dispatch(productCrtRequest()) 
        
-        const {data} = await axios.put(`/api/v1/update/${id}`,{name,price,image,seller,categories,description}) 
+        const {data} = await axios.put(`https://food-delivery-3-urm7.onrender.com/api/v1/update/${id}`,{name,price,image,seller,categories,description}) 
         console.log(data)
         dispatch(productCrtSuccess(data))
         
@@ -47,7 +47,7 @@ export const isReview=(id,rating,comment)=> async(dispatch)=>{
     try {
         dispatch(reviewRequest()) 
        
-        const {data} = await axios.put(`/api/v1/review`,{rating,comment,id}) 
+        const {data} = await axios.put(`https://food-delivery-3-urm7.onrender.com/api/v1/review`,{rating,comment,id}) 
         console.log(data)
         dispatch(reviewSuccess(data))
         console.log(data)

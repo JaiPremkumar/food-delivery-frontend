@@ -21,17 +21,7 @@ export default function Payment(){
 
     const PaymentData={
         amount:orderInfo.totalPrice,
-        shipping:{
-        name:user.name,
-        address:{
-            state:shippingInfo.state,
-            city:shippingInfo.city,
-            country:shippingInfo.country,
-            postal_code:shippingInfo.postal_code,
-            line1:shippingInfo.address
-        },
-        phone:shippingInfo.phoneNo
-      }
+         
     }
 
     const order={
@@ -54,7 +44,7 @@ export default function Payment(){
     const handleSub= async()=>{
         document.querySelector('#bbtn').disabled=true
         try {
-            const {data} = await axios.post('/api/v1/payment',PaymentData)
+            const {data} = await axios.post('https://food-delivery-3-urm7.onrender.com/api/v1/payment',PaymentData)
             const client_secret=data.client_secret
             const res = stripe.confirmCardPayment(client_secret,{
                 payment_method:{

@@ -4,7 +4,7 @@ import { favourItemRequest, favourItemSuccess } from "../slices/FavourSlice"
 export const favourItem= (id,quantity)=>async (dispatch) => {
     try {
         dispatch(favourItemRequest())
-        const{data} =await axios.get(`/api/v1/product/${id}`)
+        const{data} =await axios.get(`https://food-delivery-3-urm7.onrender.com/api/v1/product/${id}`)
         dispatch(favourItemSuccess({
             product:data.product._id,
             name:data.product.name,
@@ -22,7 +22,7 @@ export const favourItem= (id,quantity)=>async (dispatch) => {
 export const favourResItem= (id)=>async (dispatch) => {
     try {
         dispatch(favourItemRequest())
-        const{data} =await axios.get(`/api/v1/rest/${id}`)
+        const{data} =await axios.get(`https://food-delivery-3-urm7.onrender.com/api/v1/rest/${id}`)
         dispatch(favourItemSuccess({
             restarunt:data.restarunt._id,
             restarunt:data.restarunt.restarunt,
