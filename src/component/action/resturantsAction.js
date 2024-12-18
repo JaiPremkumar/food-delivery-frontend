@@ -22,7 +22,7 @@ export const createResturant =(formData)=> async(dispatch)=>{
                 'Content-type': 'multipart/form-data'
             }
         }
-        const {data} = await axios.post(`https://food-delivery-3-urm7.onrender.com/api/v1/rest/`,formData,config) 
+        const {data} = await axios.post(`https://backend-food-delivery-3aba.onrender.com/api/v1/rest/`,formData,config) 
         dispatch(newResturantSuccess(data))
         console.log(data)
     } catch (error) {
