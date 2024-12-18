@@ -10,5 +10,5 @@ export const getResturant = async(dispatch)=>{
         console.log(data)
     } catch (error) {
         dispatch(resturantsFailed(error.response.data.message))
-    }
+    } 
 }

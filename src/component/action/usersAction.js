@@ -8,7 +8,7 @@ export const adminUser=async (dispatch) => {
         dispatch(allUserSuccess(data))
         console.log(data)
     } catch (error) {
-        dispatch(allUserFailed(error))
+        dispatch(allUserFailed(error)) 
     }
 }
 
