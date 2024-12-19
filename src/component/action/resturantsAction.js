@@ -6,7 +6,7 @@ import { newResturantFailed, newResturantRequest, newResturantSuccess, resturant
 export const getSingleResturant =(id)=> async(dispatch)=>{
     try {
         dispatch(resturantsSingleRequest())
-        const {data} = await axios.get(`https://food-delivery-3-urm7.onrender.com/api/v1/rest/${id}`) 
+        const {data} = await axios.get(`https://backend-food-delivery-3aba.onrender.com/api/v1/rest/${id}`) 
         dispatch(resturantsSingleSuccess(data))
         console.log(data)
     } catch (error) {
