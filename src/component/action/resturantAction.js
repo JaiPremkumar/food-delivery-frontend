@@ -5,7 +5,7 @@ import { resturantsFailed, resturantsRequest, resturantsSuccess } from "../slice
 export const getResturant = async(dispatch)=>{
     try {
         dispatch(resturantsRequest())
-        const {data} = await axios.get(`https://backend-food-delivery-3aba.onrender.com/api/v1/rest`) 
+        const {data} = await axios.get(`https://backend-food-delivery-1.onrender.com/api/v1/rest`) 
         dispatch(resturantsSuccess(data))
         console.log(data)
     } catch (error) {

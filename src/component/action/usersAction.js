@@ -4,7 +4,7 @@ import { allUserFailed, allUserRequest, allUserSuccess, updUserFailed, updUserRe
 export const adminUser=async (dispatch) => {
     try {
         dispatch(allUserRequest())
-        const {data} = await axios.get(`https://backend-food-delivery-3aba.onrender.com/api/v1/alluser`)
+        const {data} = await axios.get(`https://backend-food-delivery-1.onrender.com/api/v1/alluser`)
         dispatch(allUserSuccess(data))
         console.log(data)
     } catch (error) {
@@ -15,7 +15,7 @@ export const adminUser=async (dispatch) => {
 export const adminUserUpdate=(id,name,email)=>async (dispatch) => {
     try {
         dispatch(updUserRequest())
-        const {data} = await axios.put(`https://backend-food-delivery-3aba.onrender.com/api/v1/update/${id}`,{name,email})
+        const {data} = await axios.put(`https://backend-food-delivery-1.onrender.com/api/v1/update/${id}`,{name,email})
         dispatch(updUserSuccess(data))
         console.log(data)
     } catch (error) {

@@ -4,7 +4,7 @@ import { productCrtFailed, productCrtRequest, productCrtSuccess, productFailed, 
 export const getProduct = id =>async(dispatch)=>{
     try {
         dispatch(productRequest())
-        const {data} = await axios.get(`https://backend-food-delivery-3aba.onrender.com/api/v1/product/${id}`) 
+        const {data} = await axios.get(`https://backend-food-delivery-1.onrender.com/api/v1/product/${id}`) 
         console.log(data)
         dispatch(productSuccess(data))
         

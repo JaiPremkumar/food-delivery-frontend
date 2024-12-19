@@ -47,7 +47,7 @@ function App() {
     store.dispatch(loadUser)
     }*/
     async function getStripe() {
-      const{data}=await axios.get(`api/v1/stripe`)
+      const{data}=await axios.get(`https://backend-food-delivery-1.onrender.com/api/v1/stripe`)
       setStripe(data.stripeApiKey)
     }
     getStripe()
