@@ -122,23 +122,21 @@ export default function Search(){
       
     </Navbar>
        
-    <div className="col">
+    
     {!search||!veg||!nonVeg?(<ProductCart/>):(
-         <Row >
+        <div className='row justify-content-center aligen-item-center'>
         {products?.map(item=>(
-          
+             
     <Card className="m-5 " style={{ width: '18rem' }}>
     <Link to={`/product/${item._id}`}><Card.Img variant="top" src={item.image} style={{height:'10rem'}}/></Link>
       <Card.Title>{item.name}</Card.Title>
      <b>{item.price}</b>
     </Card>
+     
     ))}
-    </Row>
+    </div>)}
+    
       
-    
-    )}
-    </div>
-    
       </Container>
     )
 }

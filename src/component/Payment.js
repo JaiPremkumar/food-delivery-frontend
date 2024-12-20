@@ -44,7 +44,7 @@ export default function Payment(){
     const handleSub= async()=>{
         document.querySelector('#bbtn').disabled=true
         try {
-            const {data} = await axios.post('https://backend-food-delivery-1.onrender.com/api/v1/payment',PaymentData)
+            const {data} = await axios.post('/api/v1/payment',PaymentData)
             const client_secret=data.client_secret
             const res = stripe.confirmCardPayment(client_secret,{
                 payment_method:{

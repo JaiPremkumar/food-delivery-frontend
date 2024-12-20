@@ -5,7 +5,7 @@ import { productCrtFailed, productCrtRequest, productCrtSuccess, productsFailed,
 export const getProducts = async(dispatch)=>{
     try {
         dispatch(productsRequest())
-        const {data} = await axios.get(`https://backend-food-delivery-1.onrender.com/api/v1/products`) 
+        const {data} = await axios.get(`/api/v1/products`) 
         dispatch(productsSuccess(data))
         console.log(data)
     } catch (error) {
@@ -33,7 +33,7 @@ export const getProducts = async(dispatch)=>{
 export const searchProducts = name=> async(dispatch)=>{
     try {
         dispatch(seaProductsRequest())
-        const {data} = await axios.get(`https://backend-food-delivery-1.onrender.com/api/v1/search?keyword=${name}`) 
+        const {data} = await axios.get(`/api/v1/search?keyword=${name}`) 
         dispatch(seaProductsSuccess(data))
     } catch (error) {
         dispatch(seaProductsFailed(error.response.data.message))
@@ -43,7 +43,7 @@ export const searchProducts = name=> async(dispatch)=>{
 export const adminProducts = async(dispatch)=>{
     try {
         dispatch(productsRequest())
-        const {data} = await axios.get(`https://backend-food-delivery-1.onrender.com/api/v1/products`) 
+        const {data} = await axios.get(`/api/v1/products`) 
         dispatch(productsSuccess(data))
     } catch (error) {
         dispatch(productsFailed(error.response.data.message))
@@ -51,9 +51,9 @@ export const adminProducts = async(dispatch)=>{
 }
 
 export const searchcatProducts = categroies=> async(dispatch)=>{
-    try {
+    try { 
         dispatch(seacatProductsRequest())
-        const {data} = await axios.get(`https://backend-food-delivery-1.onrender.com/api/v1/category?keys=${categroies}`) 
+        const {data} = await axios.get(`/api/v1/category?keys=${categroies}`) 
         dispatch(seacatProductsSuccess(data))
     } catch (error) {
         dispatch(seacatProductsFailed(error.response.data.message)) 
@@ -63,7 +63,7 @@ export const searchcatProducts = categroies=> async(dispatch)=>{
 export const resProducts = seller=> async(dispatch)=>{  
     try {
         dispatch(resProductsRequest())
-        const {data} = await axios.get(`https://backend-food-delivery-1.onrender.com/api/v1/seller?keys=${seller}`) 
+        const {data} = await axios.get(`/api/v1/seller?keys=${seller}`) 
         dispatch(resProductsSuccess(data))
     } catch (error) {
         dispatch(resProductsFailed(error.response.data.message)) 
