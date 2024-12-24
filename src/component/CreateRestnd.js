@@ -41,7 +41,7 @@ export default function CreateRestnd(){
         },[isCreated])
     return(
         <>
-        <h2 className="title">update-user</h2> 
+        <h2 className="title">CREATE</h2> 
         <form className="forms " >  
  
             <input type="text"

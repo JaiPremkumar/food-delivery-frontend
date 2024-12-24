@@ -64,11 +64,9 @@ export default function UpdateProduct(){
              
              <select className="form-select" value={categories} onChange={e=>setCategories(e.target.value)}>
                 
-              <option >veg</option>
+              <option >select</option>
               <option >non-veg</option>
-              <option >fast-food</option>
-              <option >western</option>
-              <option >traditional</option>
+              <option >veg</option>
             </select>
              <input type="text"
              name='seller'

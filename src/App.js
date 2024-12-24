@@ -43,15 +43,15 @@ function App() {
   const[stripe,setStripe]=useState("")
  const{isAuthenticated, isLogin} = useSelector(state=>state.userState)
   useEffect(()=>{
-    /*if(isLogin){
+    
     store.dispatch(loadUser)
-    }*/
+  
     async function getStripe() {
       const{data}=await axios.get(`/api/v1/stripe`)
       setStripe(data.stripeApiKey)
     }
     getStripe()
-    },[isLogin]) 
+    },[])  
 
   return (
     <div className="App">

@@ -24,7 +24,7 @@ export default function UserOrder(){
     return(
        <>
          <Container>
-            {Array.isArray(orders)&&orders?.map(product=>(
+            {Array.isArray(data)&&data?.map(product=>(
                 <Row>
                     <Col>
                     {Array.isArray(product?.orderItem)&&product?.orderItem?.map(pro=>(

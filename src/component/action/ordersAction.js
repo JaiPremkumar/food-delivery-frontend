@@ -6,7 +6,7 @@ import { getOrderFailed, getOrderRequest, getOrderSuccess, userOrderFailed, user
 export const admOrder=async (dispatch) => {
     try {
         dispatch(getOrderRequest())
-        const {data} = await axios.get(`/api/v1/order`)  
+        const {data} = await axios.get(`https://backend-food-delivery-1.onrender.com/api/v1/order`)  
         dispatch(getOrderSuccess(data))
         console.log(data)
     } catch (error) {
@@ -17,7 +17,7 @@ export const admOrder=async (dispatch) => {
 export const createsOrder=(order)=>async (dispatch) => {
     try {
         dispatch(getOrderRequest())
-        const {data} = await axios.post(`/api/v1/order`,order) 
+        const {data} = await axios.post(`https://backend-food-delivery-1.onrender.com/api/v1/order`,order) 
         dispatch(getOrderSuccess(data))
         console.log(data)
     } catch (error) {
@@ -28,7 +28,7 @@ export const createsOrder=(order)=>async (dispatch) => {
 export const myOrder=async (dispatch) => {
     try {
         dispatch(userOrderRequest())
-        const {data} = await axios.get(`/api/v1/myOrder`) 
+        const {data} = await axios.get(`https://backend-food-delivery-1.onrender.com/api/v1/myOrder`) 
         dispatch(userOrderSuccess(data))
         console.log(data)
     } catch (error) {

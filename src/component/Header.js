@@ -20,11 +20,11 @@ export default function Header(){
     dispatch(logOut)
   }
   
-useEffect(()=>{
-   if(isAuthenticated){
+/*useEffect(()=>{
+   
     dispatch(loadUser)
-    }
-})
+  
+},[])*/
     return(
         <>
           <Navbar expand="lg" className="bg-danger" style={{top:"0px",position:"sticky",zIndex:1}}>

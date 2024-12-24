@@ -5,7 +5,7 @@ import { kitchenFailed, kitchenRequest, kitchenSuccess, newkitchenFailed, newkit
 export const getSingleKitchen = (id)=>async(dispatch)=>{
     try {
         dispatch(kitchenRequest())
-        const {data} = await axios.get(`/api/v1/kitchen/${id}`) 
+        const {data} = await axios.get(`https://backend-food-delivery-1.onrender.com/api/v1/kitchen/${id}`) 
         dispatch(kitchenSuccess(data))
         console.log(data)
     } catch (error) {
@@ -21,7 +21,7 @@ export const createKitchen =(formData)=> async(dispatch)=>{
                         'Content-type': 'multipart/form-data'
                     }
                 }
-        const {data} = await axios.post(`/api/v1/kitchen`,formData,config) 
+        const {data} = await axios.post(`https://backend-food-delivery-1.onrender.com/api/v1/kitchen`,formData,config) 
         dispatch(newkitchenSuccess(data))
         console.log(data)
     } catch (error) {
@@ -32,7 +32,7 @@ export const createKitchen =(formData)=> async(dispatch)=>{
 export const updateKitchen =(id,name,price,description,kitchenName,image,categories)=> async(dispatch)=>{
     try {
         dispatch(newkitchenRequest())
-        const {data} = await axios.put(`/api/v1/kitchen/${id}`,{name,price,description,kitchenName,image,categories}) 
+        const {data} = await axios.put(`https://backend-food-delivery-1.onrender.com/api/v1/kitchen/${id}`,{name,price,description,kitchenName,image,categories}) 
         dispatch(newkitchenSuccess(data))
         console.log(data)
     } catch (error) {

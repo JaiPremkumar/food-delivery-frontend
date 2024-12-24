@@ -75,7 +75,7 @@ export default function Payment(){
   
     return(
         <>
-          <h2 className="title">LOGIN</h2>
+          <h2 className="title">PAYMENT</h2>
         <form className="forms" >
             <h5>CARD NUMBER</h5>
             <CardNumberElement

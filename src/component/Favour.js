@@ -12,7 +12,7 @@ return(
    <>
      
  <Button variant="dark" onClick={()=>setShow(!show)}> 
-   favour{cartItems.length}
+   favour
  </Button>
 
  <Offcanvas show={show} onHide={()=>setShow(!show)} placement={'start'}>

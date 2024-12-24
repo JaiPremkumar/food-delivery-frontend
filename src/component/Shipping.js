@@ -39,7 +39,7 @@ export default function Shipping(){
     return(
         <>
          
-      <h2 className="title">UPDATE PROFILE</h2>
+      <h2 className="title">SHIPPING</h2>
          <form className="forms" >
              <input type="text"
              name='address'
@@ -85,7 +85,7 @@ export default function Shipping(){
              onChange={e=>setCountry(e.target.value)}
              />
              
-             <Button onClick={()=>handleSubmit()}>Register</Button>
+             <Button onClick={()=>handleSubmit()}>CHECK-OUT</Button>
          </form>
         </>
         

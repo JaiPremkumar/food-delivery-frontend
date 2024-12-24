@@ -30,7 +30,8 @@ export default function KitchenDetail(){
                     <Col>
                     <Card style={{ width: '30rem', border:'none',height:'30rem' }}>
       <Card.Body>
-        <Card.Title><h1>Menu: {kitchen.kitchenName}</h1></Card.Title>
+          <h1>{kitchen.kitchenName}</h1>
+        <Card.Title><h1>Menu: {kitchen.name}</h1></Card.Title>
         <br/>
         <Card.Subtitle className="mb-2 text-muted"><h2>Price: {kitchen.price}</h2></Card.Subtitle>
         <br></br>

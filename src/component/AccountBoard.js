@@ -14,11 +14,11 @@ export default function AccountBoard(){
          <Button variant="success" onClick={()=>navigate('/create-rest')} type="submit">Restarunt</Button>
         <Row>
           <Col xs="auto">
-          <Button variant="success" onClick={()=>navigate('/create-kitchen')} type="submit">Product</Button>
+          <Button variant="success" onClick={()=>navigate('/create')} type="submit">Product</Button>
           </Col>
           
         </Row>
-        <Button variant="success" onClick={()=>navigate('/create')} type="submit">Cloud-kitchen</Button>
+        <Button variant="success" onClick={()=>navigate('/create-kitchen')} type="submit">Cloud-kitchen</Button>
     </Navbar>
         </>
     )
