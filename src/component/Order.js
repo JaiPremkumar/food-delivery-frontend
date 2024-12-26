@@ -28,7 +28,7 @@ export default function Order(){
    
 
     const checkout=()=>{
-        navigate('/login?redirect=shipping')
+        navigate('/shipping')
     }
 
     return(

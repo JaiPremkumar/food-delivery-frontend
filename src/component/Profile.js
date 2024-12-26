@@ -10,11 +10,11 @@ export default function Profile(){
   const dispatch = useDispatch()
 
 
-  /*useEffect(()=>{
-     if(isAuthenticated){
+  useEffect(()=>{
+    
       dispatch(loadUser) 
-     }
-  },[isAuthenticated])*/
+  
+  },[])
 
     return(
       <>
