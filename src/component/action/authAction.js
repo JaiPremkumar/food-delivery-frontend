@@ -1,5 +1,8 @@
 import axios from "axios"
-import { allUserFailed, allUserRequest, allUserSuccess, loginFailed, loginRequest, loginSuccess, logOutFailed, logOutSuccess, logUserFailed, logUserRequest, logUserSuccess, registerFailed, registerRequest, registerSuccess, updateUserFailed, updateUserRequest, updateUserSuccess } from "../slices/userSlice"
+import { allUserFailed, allUserRequest, allUserSuccess, loginFailed, loginRequest,
+     loginSuccess, logOutFailed, logOutSuccess, logUserFailed, logUserRequest, logUserSuccess, 
+     registerFailed, registerRequest, registerSuccess, updateUserFailed, updateUserRequest,
+      updateUserSuccess } from "../slices/userSlice"
 
 
 
