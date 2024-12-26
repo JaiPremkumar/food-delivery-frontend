@@ -59,9 +59,9 @@ function App() {
       <BrowserRouter>
       <Header/>
       <Routes>
-        <Route path='/register' element={<RegisterFrm/>}/>
+        <Route path='/' element={<RegisterFrm/>}/> 
         <Route path='/login' element={<LoginForm/>}/>
-        <Route path='/' element={<Carosel/>}/>
+        <Route path='/home' element={<Carosel/>}/>
         <Route path='/Dp' element={<Profile/>}/>
         <Route path='/updateDp' element={<UpdateProfile/>}/>
         <Route path='/product/:id' element={<ProductDetail/>}/>
