@@ -43,16 +43,16 @@ function App() {
   const[stripe,setStripe]=useState("")
  const{isAuthenticated, isLogin} = useSelector(state=>state.userState)
   useEffect(()=>{
-    if(isAuthenticated){
+    
         store.dispatch(loadUser)
-    }
+    
   
     async function getStripe() {
       const{data}=await axios.get(`https://backend-food-delivery-1.onrender.com/api/v1/stripe`)
       setStripe(data.stripeApiKey)
     }
     getStripe()
-    },[isAuthenticated])  
+    },[])  
 
   return (
     <div className="App">
