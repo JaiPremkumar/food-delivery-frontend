@@ -81,7 +81,7 @@ export default function RegisterFrm(){
    
     useEffect(()=>{
         if(isAuthenticated){
-        navigate('/')
+        navigate('/login')
         }
     })
     return(

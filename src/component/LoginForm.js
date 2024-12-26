@@ -52,7 +52,7 @@ export  default function LoginForm(){
     
     useEffect(()=>{
       if(isLogin){
-        navigate(redirect)
+        navigate('/home')
       }
     })
 
@@ -89,7 +89,7 @@ export  default function LoginForm(){
             <Button onClick={handleSubmit} 
             
             >Login</Button>
-            <Link to={'/register'}><p>NewUser</p></Link>
+            <Link to={'/'}><p>NewUser</p></Link>
               
         </form>
         
