@@ -108,9 +108,7 @@ export default function AdminProducts(){
                                 <td>
                                     <b>{item._id}</b>
                                 </td>
-                                <td><b>{item.name}</b></td>
-                                <td><b>{item.price}</b></td>
-                               
+                                <td><b>{item.restarunt}</b></td>
                         
                                     <Button
                             

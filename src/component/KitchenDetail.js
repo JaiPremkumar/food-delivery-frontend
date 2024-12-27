@@ -12,6 +12,7 @@ export default function KitchenDetail(){
     const{error, isAuthenticated} = useSelector(state=>state.userState)
     const dispatch = useDispatch() 
     const{id} = useParams()
+     const [quantity,setQuantity] = useState(1)
     
 
     useEffect(()=>{
