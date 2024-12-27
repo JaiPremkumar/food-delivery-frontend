@@ -6,7 +6,7 @@ import { loadUser } from "./action/authAction"
 
 export default function Profile(){
 
-  const{isAuthenticated, user} = useSelector(state=>state.userState)
+  const{isAuthenticated,isLogin, user} = useSelector(state=>state.userState)
   const dispatch = useDispatch()
 
 
@@ -18,7 +18,7 @@ export default function Profile(){
 
     return(
       <>
-      {isAuthenticated?
+      {isLogin?
         (<div className='row'>
     
         <Card className='m-5' style={{ width: '18rem' }}> 
