@@ -62,6 +62,7 @@ const userSlice = createSlice({
         return{
             loading:false,
             isAuthenticated:true,
+            isLogin:true,
             user:action.payload.user
         }   
     },
@@ -99,6 +100,7 @@ const userSlice = createSlice({
         return{
             loading:false,
             isAuthenticated:true,
+            isLogin:true,
             user:action.payload.user
         }   
     },
