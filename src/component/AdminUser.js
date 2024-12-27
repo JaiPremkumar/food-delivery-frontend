@@ -3,11 +3,17 @@ import { Button } from "react-bootstrap"
 import { useDispatch, useSelector } from "react-redux"
 import { adminUser } from "./action/usersAction"
 import { Link } from "react-router-dom"
+import axios from "axios"
 
 export default function AdminUser(){
 
     const{users} = useSelector(state=>state.usersState)
     const dispatch = useDispatch()
+
+    const handleDelete=async (id) => {
+        await axios.delete(`https://backend-food-delivery-1.onrender.com/api/v1/user/${id}`)
+        
+    }
 
     useEffect(()=>{
         dispatch(adminUser)
@@ -37,7 +43,7 @@ export default function AdminUser(){
                                >Eidt</Button></Link>
                            
                                <Button  className="btn btn-danger ms-2"
-                           
+                             onClick={()=>handleDelete(item._id)}
                                >Remove</Button>
                                 </tr>
                                 </table>
