@@ -10,15 +10,11 @@ export default function Profile(){
   const dispatch = useDispatch()
 
 
-  useEffect(()=>{
-    
-      dispatch(loadUser) 
   
-  },[])
 
     return(
       <>
-      {isLogin?
+      {isAuthenticated?
         (<div className='row'>
     
         <Card className='m-5' style={{ width: '18rem' }}> 
