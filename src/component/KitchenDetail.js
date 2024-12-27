@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { useParams } from "react-router-dom"
 import { getSingleKitchen } from "./action/kitchensAction"
 import { Button, Card, Col, Container, Row } from "react-bootstrap"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { addCartKitchen } from "./action/cartAction"
 
 
