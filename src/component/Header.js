@@ -6,13 +6,14 @@ import OffCart from './OffCart';
 import { useDispatch, useSelector } from 'react-redux';
 import { Button, Dropdown, DropdownButton } from 'react-bootstrap';
 import { loadUser, logOut } from './action/authAction';
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Favour from './Favour';
 import { useEffect } from 'react';
 
 export default function Header(){ 
 
   const{isAuthenticated, user} = useSelector(state=>state.userState) 
+  const navigate = useNavigate()
 
   const dispatch = useDispatch()
 
@@ -44,8 +45,8 @@ export default function Header(){
               <Dropdown.Item href="#/action-1"  >{user.name}</Dropdown.Item>
               <Dropdown.Item href="#/action-2">{user.role}</Dropdown.Item>
               
-              <Link to={'/Dp'}><Dropdown.Item >Profile</Dropdown.Item></Link>
-              <Link to={'/userorder'}><Dropdown.Item >MyOrder</Dropdown.Item></Link>
+              <Dropdown.Item  ><Link to={'/Dp'}>Profile</Link></Dropdown.Item>
+              <Dropdown.Item ><Link to={'/userorder'}>MyOrder</Link></Dropdown.Item>
               <Dropdown.Item onClick={handlelogOut}>Logout</Dropdown.Item>
             </DropdownButton>
             )
