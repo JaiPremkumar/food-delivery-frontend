@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom"
 import { getSingleKitchen } from "./action/kitchensAction"
 import { Button, Card, Col, Container, Row } from "react-bootstrap"
 import { useEffect } from "react"
+import { addCartKitchen } from "./action/cartAction"
 
 
 export default function KitchenDetail(){
@@ -39,7 +40,7 @@ export default function KitchenDetail(){
             <b>description: {kitchen.description}</b>
         </Card.Text>
        
-        <Button variant="danger"  >addToCart</Button>
+        <Button variant="danger"  onClick={()=>dispatch(addCartKitchen(kitchen._id,quantity))} >addToCart</Button>
       </Card.Body>
     </Card>
                     </Col>

@@ -19,3 +19,21 @@ export const addCartItem= (id,quantity)=>async (dispatch) => {
     }
 }
 
+export const addCartKitchen= (id,quantity)=>async (dispatch) => {
+    try {
+        dispatch(addItemRequest())
+        const{data} =await axios.get(`https://backend-food-delivery-1.onrender.com/api/v1/kitchen/${id}`)
+        dispatch(addItemSuccess({
+            kitchen:data.kitchen._id,
+            name:data.kitchen.name,
+            price:data.kitchen.price,
+            image:data.kitchen.image,
+            quantity
+            
+        
+        }))
+    } catch (error) {
+        
+    }
+}
+
