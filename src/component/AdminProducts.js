@@ -4,6 +4,7 @@ import { adminProducts } from "./action/ProductsAction"
 import { Button } from "react-bootstrap"
 import { useNavigate } from "react-router-dom"
 import { updateProduct } from "./action/ProductAction"
+import axios from "axios"
 
 export default function AdminProducts(){
 
@@ -16,6 +17,9 @@ export default function AdminProducts(){
 
     const handleMove=(id)=>{
         navigate(`/admin/update/${id}`) 
+    }
+    const handleDelete=async (id) => {
+        await axios.delete(`https://backend-food-delivery-1.onrender.com/api/v1/product/${id}`)
     }
 
     useEffect(()=>{
@@ -46,7 +50,7 @@ export default function AdminProducts(){
                                     >Eidt</Button>
                                 
                                     <Button  className="btn btn-danger ms-2"
-                                
+                                     onClick={()=>handleDelete(item._id)}
                                     >Remove</Button>
                                      </tr>
                                      </table>

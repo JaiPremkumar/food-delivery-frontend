@@ -44,8 +44,8 @@ export default function Header(){
               <Dropdown.Item href="#/action-1"  >{user.name}</Dropdown.Item>
               <Dropdown.Item href="#/action-2">{user.role}</Dropdown.Item>
               
-              <Dropdown.Item href="Dp">Profile</Dropdown.Item>
-              <Dropdown.Item href="userorder">MyOrder</Dropdown.Item>
+              <Link to={'/Dp'}><Dropdown.Item >Profile</Dropdown.Item></Link>
+              <Link to={'/userorder'}><Dropdown.Item >MyOrder</Dropdown.Item></Link>
               <Dropdown.Item onClick={handlelogOut}>Logout</Dropdown.Item>
             </DropdownButton>
             )
